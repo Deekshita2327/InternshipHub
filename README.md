@@ -1,17 +1,101 @@
-# flutter_application_1
+# InternshipHub 🚀
 
-A new Flutter project.
+InternshipHub is a Flutter-based internship application tracking platform designed to help students manage their internship applications, profiles, saved opportunities, and application progress in one place.
 
-## Getting Started
+## 📌 Project Overview
 
-This project is a starting point for a Flutter application.
+Students often apply to multiple internships across different companies and platforms, making it difficult to keep track of application dates, deadlines, interview stages, and selection status.
 
-A few resources to get you started if this is your first Flutter project:
+InternshipHub provides a centralized platform where students can:
 
-- [Learn Flutter](https://docs.flutter.dev/get-started/learn-flutter)
-- [Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Flutter learning resources](https://docs.flutter.dev/reference/learning-resources)
+- Create their own account
+- Maintain their student profile
+- Track internship applications
+- View application details
+- Save internship opportunities
+- Monitor application status
+- Manage their internship journey from one dashboard
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## ✨ Features
+
+### 🔐 User Authentication
+- Student registration
+- Student login
+- Firebase Authentication
+- Individual user accounts
+- Secure user-specific data
+
+### 👤 Student Profile
+- Student name
+- Email
+- College
+- Branch
+- Academic year
+- CGPA
+- Skills
+- Resume management
+
+### 💼 Internship Application Tracking
+Students can maintain details such as:
+
+- Company name
+- Internship role
+- Location
+- Application date
+- Application deadline
+- Application status
+- Notes
+- Job/application link
+
+### 📊 Dashboard
+The dashboard provides an overview of the student's internship journey, including:
+
+- Total applications
+- Applications in progress
+- Interview opportunities
+- Selected applications
+- Saved opportunities
+
+### 🔖 Saved Internships
+Students can save internship opportunities for quick access later.
+
+### 📄 Application Details
+Students can open an internship application and view its complete information.
+
+### ☁️ Cloud Backend
+InternshipHub uses Firebase services to provide:
+
+- Firebase Authentication
+- Cloud Firestore
+- Firebase Storage for resume management
+
+## 🛠️ Tech Stack
+
+| Technology | Purpose |
+|------------|---------|
+| Flutter | Cross-platform application development |
+| Dart | Application programming language |
+| Firebase Authentication | User registration and login |
+| Cloud Firestore | User and application data |
+| Firebase Storage | Resume/file storage |
+| Material 3 | User interface |
+
+## 🏗️ Application Architecture
+
+```text
+                    InternshipHub
+                          │
+                          ▼
+                    Flutter App
+                          │
+             ┌────────────┼────────────┐
+             │            │            │
+             ▼            ▼            ▼
+        Authentication  Firestore   Storage
+             │            │            │
+             ▼            ▼            ▼
+        Student UID    Applications  Resume
+             │            │
+             └──────┬─────┘
+                    ▼
+             Student Dashboard
